@@ -1,0 +1,100 @@
+# 📄 GeoZK - Modular Versions Roadmap
+
+This document outlines future versions of the GeoZK project beyond the core MVP. Each version focuses on extensibility, privacy-performance trade-offs, and real-world adoption for different environments.
+
+---
+
+## 🔧 Core Axes of Modularity
+
+1. **Location Granularity**
+
+   * Fine: GPS coordinates (±5m)
+   * Medium: Hex Grid (e.g., H3)
+   * Coarse: City-level / region-level
+
+2. **Deployment Mode**
+
+   * Centralized: GeoZK backend verifies proof
+   * Decentralized: Smart contract (ZK-rollup compatible)
+
+3. **Proof Type**
+
+   * SNARK (e.g., Groth16 via Circom)
+   * STARK (e.g., Cairo/StarkNet)
+   * Floating-point SNARKs (IEEE-754 compliant)
+   * Bulletproofs (optional)
+
+4. **Location Source**
+
+   * Device GPS
+   * Wi-Fi / Bluetooth
+   * Hardware beacons
+   * Sensor fusion / multiple attestation sources
+
+5. **Attestation Strength**
+
+   * Browser-based
+   * OS/hardware-based attestation
+   * Third-party verified beacon/sensor
+
+6. **Verifier Type**
+
+   * Smart contract (EVM, StarkNet, ZK-rollups)
+   * API backend
+   * Client SDK
+
+---
+
+## 📦 Future Versions of GeoZK
+
+1. **GeoZK-Core (✅ MVP Focus)**
+
+   * SNARK-based
+   * Hex-grid based region proof
+   * Centralized backend verifier (Node.js)
+   * Command-line + basic web UI
+
+2. **GeoZK-Lite**
+
+   * Purely client-side
+   * Browser location API
+   * Lower proof strength, fast generation
+   * Demo use-cases like attendance check-in
+
+3. **GeoZK-Edge**
+
+   * Designed for IoT/edge devices
+   * Hardware-anchored attestation (e.g., GPS chip + Wi-Fi signal)
+   * Applications: vehicle, warehouse, delivery tracking
+
+4. **GeoZK-Float**
+
+   * High-precision, floating-point based proof circuits (IEEE-754)
+   * Custom grid boundary selection
+   * Academic/research optimized version
+
+5. **GeoZK-Chain**
+
+   * Fully decentralized
+   * Smart contract verifier deployed on zkEVM or StarkNet
+   * Trusted setup avoided (via STARK)
+
+6. **GeoZK-SDK**
+
+   * Modular proof-generation and verification SDK
+   * Easy integration into mobile/web apps
+   * Backend or frontend support
+
+7. **GeoZK-Pro**
+
+   * Enterprise/government-grade
+   * Policy-based access, privacy control
+   * Auditable proofs with regulatory compliance
+
+---
+
+🚧 Note:
+This roadmap is for modular evolution after the MVP is stable. Each version will have benchmarks to guide tradeoffs between privacy, speed, and usability.
+
+Contact: @rounsunn-dev
+Project: GeoZK (Zero-Knowledge Location Proof System)
