@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+geo-zk-env/
+
+# Node.js
+node_modules/
+dist/
+
+# Rust
+target/
+
+# ZK build artifacts
+*.r1cs
+*.wasm
+*.zkey
+*.wtns
+*.json
+circuit_final.*
+
+# VSCode & system
+.vscode/
+.DS_Store
+
+# Docker volumes
+data_volume/
